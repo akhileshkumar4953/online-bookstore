@@ -2,18 +2,8 @@
 
   <div class="col-lg-3">
 
+<app-book-category></app-book-category>
 
-      <div class="list-group">
-          <a routerLink="/category/1" class="list-group-item"
-          routerLinkActive="bg-primary text-white font-weight-bold">Web Development</a>
-
-          <a routerLink="/category/2" class="list-group-item"
-          routerLinkActive="bg-primary text-white font-weight-bold">Programming</a>
-
-          <a routerLink="/category/3" class="list-group-item"
-          routerLinkActive="bg-primary text-white font-weight-bold">Databases</a>
-        
-      </div>
 
   </div>
   <!-- /.col-lg-3 -->
@@ -39,6 +29,11 @@
             </div>
           </div>
         </div>
+
+    <div *ngIf="books?.length==0" class="col-md-12 alert alert-warning mt-3">
+
+      No books found
+    </div>
   </div>
 
 
